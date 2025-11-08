@@ -14,6 +14,7 @@
     ~/.zshrc: zsh/zshrc
     ~/.oh-my-zsh: zsh/ohmyzsh/
     ~/.config/base16-shell: zsh/base16-shell
+    ~/.config/ghostty: ghostty
     ~/.config/nvim/init.vim: nvim/init.vim
     ~/.config/nvim/init-vscode.vim: nvim/init-vscode.vim
     ~/.gitconfig: git/gitconfig
