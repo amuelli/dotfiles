@@ -1,27 +1,37 @@
 [user]
-	name = Alex Mülli
+	name = Alex Mülli
 	email = amuelli@gmail.com
 [alias]
 	co = checkout
 	ci = commit
-	st = status
+	st = status -sb
 	br = branch
-	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short -10
 	type = cat-file -t
 	dump = cat-file -p
+	sw = switch
+	rs = restore
 [color]
-	ui = true
+	ui = auto
 [core]
-	autocrlf = false
+	autocrlf = input
 	safecrlf = true
 	quotepath = false
 	editor = vim
-	excludesfile = ~/.gitignore
+	excludesfile = ~/.config/git/ignore
 [push]
 	default = simple
 [filter "lfs"]
+	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
 	required = true
 	clean = git-lfs clean -- %f
 [pull]
 	rebase = true
+[rebase]
+	autoStash = true
+[fetch]
+	prune = true
+[init]
+	defaultBranch = main
