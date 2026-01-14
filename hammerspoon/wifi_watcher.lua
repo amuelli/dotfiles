@@ -1,3 +1,5 @@
+-- Workaround: trigger Location Services permission for Hammerspoon
+print(hs.location.get())
 wifiMenu = hs.menubar.new(true, 'Wifi SSID')
 --                    ^   ^     ^-- autosaveName (makes the menu stay in the same place across Hammerspoon launches)
 --                    |   |         This can be whatever you want.
